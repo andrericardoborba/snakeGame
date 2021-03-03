@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>Snake Game</title>
+  </head>
+  <body>
+    <div id="container">
+      <aside class="dashboard">
+        <h1 class="title">SNAKE GAME!</h1>
+        <div class="mode">
+          <div class="points">
+            SCORE:
+            <span id="score">0</span>
+          </div>
+        </div>
+        <div class="mode">
+          <div class="points">
+            LEVEL:
+            <span id="level">1</span>
+          </div>
+          <div>
+            <button id="add" onclick="addLevel()">+</button>
+        </div>
+        </div>
+        
+      </aside>
+
+      <canvas id="snake" width="512" height="512"></canvas>
+    </div>
+  </body>
+</html>

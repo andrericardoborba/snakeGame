@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{   
+    font-family: 'Luckiest Guy', cursive;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    box-sizing: border-box;
+    
+    background-color: #414141;
+}
+
+.title{
+    font-size: 30px;
+}
+
+#container{
+    background-color: aqua;
+    height: 90%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 3px solid #000000;
+    border-radius: 10px;   
+}
+
+h1{
+    margin-right: 15px;
+    font-size: 25px;
+    
+}
+
+#snake{
+  border: 3px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  flex-direction: column;
+  margin-bottom: 25px;
+  border-radius: 10px;  
+}
+.dashboard{
+    height: 80%;
+    width: 200px;
+    display: flex;
+    justify-content:  space-evenly;   
+    flex-direction: column;  
+}
+.mode{
+    height: 20px;
+    width: 100px;
+    display: flex;
+    background-color: aliceblue;
+    border: 1px solid #000000;
+    padding: 5px;
+    border-radius: 5px;
+}
+span{
+    padding: 10px;
+   
+}
+
+#add{
+    cursor: pointer;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    margin-left: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    box-shadow: -2px -2px 2px rgba(255,255,255,.1), 2px 2px 2px rgba(0,0,0,.5);
+}
+#add:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s;
+    opacity: 0.7;
+}
+.points{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
