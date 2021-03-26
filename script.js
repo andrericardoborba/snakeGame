@@ -34,7 +34,7 @@ function makeBG(){
 
 function makeSnake(){
     for(let i= 0; i< snake.length; i++){
-        context.fillStyle = "green";
+        context.fillStyle = "black";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }

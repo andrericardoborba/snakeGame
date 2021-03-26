@@ -11,27 +11,29 @@
   </head>
   <body>
     <div id="container">
-      <aside class="dashboard">
+      <div class="dashboard">
         <h1 class="title">SNAKE GAME!</h1>
         <div class="mode">
           <div class="points">
             SCORE:
-            <span id="score">0</span>
+            <span class="number" id="score">0</span>
           </div>
         </div>
         <div class="mode">
           <div class="points">
             LEVEL:
-            <span id="level">1</span>
+            <span class="number" id="level">1</span>
           </div>
           <div>
             <button id="add" onclick="addLevel()">+</button>
         </div>
         </div>
         
-      </aside>
+      </div>
+      <div class="game">
+        <canvas id="snake" width="512" height="512"></canvas>
 
-      <canvas id="snake" width="512" height="512"></canvas>
+      </div>
     </div>
   </body>
 </html>
