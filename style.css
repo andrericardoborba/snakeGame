@@ -48,8 +48,8 @@ body{
 }
 
 .mode{
-    height: 30px;
-    width: 100px;
+    height: 60px;
+    width: 200px;
     display: flex;
     background-color: aliceblue;
     border: 1px solid #000000;
@@ -65,12 +65,13 @@ body{
 #add{
     cursor: pointer;
     outline: none;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     box-sizing: border-box;
-    margin-left: 40px;
+    margin-left: 80px;
+    font-size: 1.4rem;
     border-radius: 50%;
-    border: none;
+    border: 2px solid black;
     background-color: #fff;
     box-shadow: -2px -2px 2px rgba(255,255,255,.1), 2px 2px 2px rgba(0,0,0,.5);
 }
@@ -83,6 +84,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2rem;
     
 }
 
