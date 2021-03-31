@@ -28,20 +28,27 @@ function scoreFood(){
 }
 
 function makeBG(){
-    context.fillStyle = "lightgreen";
+    context.fillStyle = "#737a7a";
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
 function makeSnake(){
-    for(let i= 0; i< snake.length; i++){
+    for(let i = 0; i< snake.length; i++){
         context.fillStyle = "black";
+        context.strokeStyle = '#ffffff';
+        context.lineWidth = 2;
         context.fillRect(snake[i].x, snake[i].y, box, box);
+        context.strokeRect(snake[i].x, snake[i].y, box, box);
     }
 }
 
 function drawFood(){
-    context.fillStyle ='red';
+    context.fillStyle ='#993399';
+    context.strokeStyle = '#ffffff';
+    context.lineWidth = 2;
     context.fillRect(food.x, food.y, box, box);
+    context.strokeRect(food.x, food.y, box, box);
+ 
 }
 
 document.addEventListener('keydown', update);
@@ -51,6 +58,7 @@ function update(event){
     if(event.keyCode == 38 && direction != "down") direction = "up";
     if(event.keyCode == 39 && direction != "left") direction = "right";
     if(event.keyCode == 40 && direction != "up") direction = "down";
+    
 }
 
 function playGame(){
