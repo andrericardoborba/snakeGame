@@ -14,7 +14,7 @@ let food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
     y: Math.floor(Math.random() * 15 + 1) * box
 }
-// console.log(food.x, food.y);
+
 function addLevel(){   
     let level = document.querySelector("#level").innerHTML = levelUp++;      
 }
@@ -43,7 +43,7 @@ function makeSnake(){
 }
 
 function drawFood(){
-    context.fillStyle ='#993399';
+    context.fillStyle ='#800800';
     context.strokeStyle = '#ffffff';
     context.lineWidth = 2;
     context.fillRect(food.x, food.y, box, box);

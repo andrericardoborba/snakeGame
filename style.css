@@ -10,9 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
-    
-    
+    color: #800800;
     background-color: #414141;
 }
 
@@ -22,9 +20,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #800080;
+    background-color: #000000;
     border: 3px solid #000000;
-    /* border-radius: 10px;  */
+    border-radius: 10px; 
 }
 .dashboard{
     width: 40%;
