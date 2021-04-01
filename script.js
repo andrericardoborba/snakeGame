@@ -15,15 +15,25 @@ let food = {
     y: Math.floor(Math.random() * 15 + 1) * box
 }
 
+function restart() {
+    let gameOver = document.querySelector("#gameOver");
+    gameOver.style.display = "none";
+    
+    window.location.reload();
+  }
+
 function addLevel(){   
     let level = document.querySelector("#level").innerHTML = levelUp++;      
 }
 function scoreFood(){
     let score = document.querySelector("#score");
     score.innerHTML = scoreUp++;
-    console.log(scoreUp);
     if(scoreUp % 3 == 0){
-        addLevel()
+        addLevel();
+        snake.pop();        
+    }else if(scoreUp % 5 == 0){
+        snake.pop();
+        snake.pop();
     }
 }
 
@@ -66,12 +76,13 @@ function playGame(){
     if(snake[0].x < 0 && direction == "left" ) snake[0].x = 16 * box;
     if(snake[0].y > 15 * box && direction == "down" ) snake[0].y = 0;
     if(snake[0].y < 0 && direction == "up" ) snake[0].y = 16 * box;
-
+    
     for(let i = 1; i< snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(game);
-            alert('Game Over :(')
-        }
+            let gameOver = document.querySelector("#gameOver");
+            gameOver.style.display = "flex";
+            }
     }
 
     makeBG();
@@ -102,8 +113,3 @@ function playGame(){
 }
 
 let game = setInterval(playGame, 150);
-
-
-
-
-
