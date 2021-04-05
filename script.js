@@ -1,5 +1,6 @@
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
+let game = null;
 let box = 32;
 let snake = [];
 snake[0] = {
@@ -15,19 +16,11 @@ let food = {
   y: Math.floor(Math.random() * 15 + 1) * box,
 };
 
-function restart() {
-  let gameOver = document.querySelector(".gameOver");
-  gameOver.style.display = "none";
-
-  window.location.reload();
-}
-
 function scoreFood() {
   function addLevel() {
     let level = (document.querySelector("#level").innerHTML = levelUp++);
   }
-  let score = document.querySelector("#score");
-  score.innerHTML = scoreUp++;
+  let score = (document.querySelector("#score").innerHTML = scoreUp++);
   if (scoreUp % 5 == 0) {
     addLevel();
   }
@@ -106,4 +99,27 @@ function playGame() {
   snake.unshift(newHead);
 }
 
-let game = setInterval(playGame, 150);
+function restart() {
+  let gameOver = document.querySelector(".gameOver");
+  gameOver.style.display = "none";
+  snake = [];
+  snake[0] = {
+    x: 8 * box,
+    y: 8 * box,
+  };
+  document.querySelector("#level").innerHTML = 1;
+  document.querySelector("#score").innerHTML = 0;
+  levelUp = 1;
+  scoreUp = 1;
+  direction = "right";
+  food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box,
+  };
+  game = setInterval(playGame, 150);
+}
+function start() {
+  let startGame = document.querySelector(".startGame");
+  startGame.style.display = "none";
+  game = setInterval(playGame, 150);
+}

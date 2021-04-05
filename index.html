@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="script.js"></script>
     <title>Snake Game</title>
   </head>
   <body>
+    <div class="startGame">
+      <p class="title-game">SNAKE GAME</p>
+      <button class="btn" onclick="start()">START</button>
+    </div>
     <div id="container">
       <div class="dashboard">
         <h1 class="title">SNAKE GAME!</h1>
@@ -24,20 +31,15 @@
             LEVEL:
             <span class="number" id="level">1</span>
           </div>
-          
         </div>
-        
       </div>
       <div class="game">
         <canvas id="snake" width="512" height="512"></canvas>
-
       </div>
       <div class="gameOver">
-        <p id="gameOver">
-            GAME OVER!
-        </p>
-        <button id="restart" onclick="restart()">RESTART</button>
-    </div>
+        <p id="gameOver">GAME OVER!</p>
+        <button class="btn" onclick="restart()">RESTART</button>
+      </div>
     </div>
   </body>
 </html>
